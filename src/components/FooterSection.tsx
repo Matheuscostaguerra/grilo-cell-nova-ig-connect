@@ -27,8 +27,8 @@ const Footer = () => {
               Estrada Rio São Paulo 2115, Jardim Guandu, KM 35
             </p>
             <p className="text-sm text-muted-foreground mb-1">Nova Iguaçu - RJ</p>
-            <p className="text-sm text-muted-foreground mt-3">Seg-Sex: 08:00–19:00</p>
-            <p className="text-sm text-muted-foreground">Sáb: 08:00–17:00</p>
+            <p className="text-sm text-muted-foreground mt-3">Seg-Sex: 08:00–18:00</p>
+            <p className="text-sm text-muted-foreground">Sáb: 08:00–14:00</p>
           </div>
 
           {/* Links */}

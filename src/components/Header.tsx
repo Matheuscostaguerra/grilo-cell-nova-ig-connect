@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, MessageCircle, ShoppingBag } from "lucide-react";
 import { WHATSAPP_URL, STORE_URL } from "@/lib/constants";
+import griloLogo from "@/assets/grilo-logo.png";
 
 const navLinks = [
   { label: "Serviços", href: "#servicos" },
@@ -22,14 +23,12 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-primary/10">
       <div className="container flex items-center justify-between h-16">
-        {/* Logo placeholder */}
+        {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center font-black text-primary-foreground text-lg">
-            G
-          </div>
-          <span className="font-bold text-lg text-foreground hidden sm:block">
+          <img src={griloLogo} alt="Grilo Cell" className="w-9 h-9 object-contain" />
+          <span className="font-tech font-bold text-sm text-foreground hidden sm:block tracking-wider">
             GRILO <span className="text-primary">CELL</span>
           </span>
         </a>
@@ -83,7 +82,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-background border-t border-border">
+        <div className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-primary/10">
           <nav className="container py-4 flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
@@ -95,7 +94,7 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <div className="flex gap-3 pt-3 border-t border-border">
+            <div className="flex gap-3 pt-3 border-t border-primary/10">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"

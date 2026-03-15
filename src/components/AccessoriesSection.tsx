@@ -13,8 +13,9 @@ const products = [
 
 const AccessoriesSection = () => {
   return (
-    <section id="acessorios" className="py-20">
-      <div className="container">
+    <section id="acessorios" className="py-20 relative">
+      <div className="absolute inset-0 circuit-dots pointer-events-none opacity-30" />
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -22,7 +23,7 @@ const AccessoriesSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-            Acessórios & <span className="text-primary">Loja Online</span>
+            Acessórios & <span className="text-gradient-green font-tech">Loja Online</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Tudo para seu dispositivo. Compre online com entrega ou retire na loja.
@@ -37,9 +38,9 @@ const AccessoriesSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="card-tech flex flex-col items-center justify-center gap-3 aspect-square"
+              className="card-tech flex flex-col items-center justify-center gap-3 aspect-square group"
             >
-              <span className="text-4xl">{product.emoji}</span>
+              <span className="text-4xl group-hover:scale-110 transition-transform">{product.emoji}</span>
               <span className="text-sm font-medium text-foreground">{product.name}</span>
             </motion.div>
           ))}

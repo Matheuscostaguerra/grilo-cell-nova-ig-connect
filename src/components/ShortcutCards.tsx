@@ -43,10 +43,11 @@ const shortcuts = [
 
 const ShortcutCards = () => {
   return (
-    <section className="py-20">
-      <div className="container">
+    <section className="py-20 relative">
+      <div className="absolute inset-0 circuit-dots pointer-events-none opacity-50" />
+      <div className="container relative z-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12">
-          Como podemos <span className="text-primary">ajudar?</span>
+          Como podemos <span className="text-gradient-green font-tech">ajudar?</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {shortcuts.map((item, i) => (
@@ -60,9 +61,9 @@ const ShortcutCards = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-tech flex flex-col items-center text-center gap-4 hover:scale-[1.02] cursor-pointer"
+              className="card-tech flex flex-col items-center text-center gap-4 hover:scale-[1.02] cursor-pointer group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors group-hover:shadow-[0_0_20px_hsl(152_100%_50%/0.2)]">
                 <item.icon size={28} className="text-primary" />
               </div>
               <h3 className="font-bold text-foreground">{item.title}</h3>

@@ -1,18 +1,17 @@
 import { MessageCircle, ShoppingBag, Instagram } from "lucide-react";
 import { WHATSAPP_URL, STORE_URL, INSTAGRAM_URL } from "@/lib/constants";
+import griloLogo from "@/assets/grilo-logo.png";
 
 const Footer = () => {
   return (
-    <footer id="contato" className="py-12 border-t border-border bg-secondary/20">
+    <footer id="contato" className="py-12 border-t border-primary/10 bg-secondary/10">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center font-black text-primary-foreground text-lg">
-                G
-              </div>
-              <span className="font-bold text-lg text-foreground">
+              <img src={griloLogo} alt="Grilo Cell" className="w-10 h-10 object-contain" />
+              <span className="font-tech font-bold text-sm text-foreground tracking-wider">
                 GRILO <span className="text-primary">CELL</span>
               </span>
             </div>
@@ -64,7 +63,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-6 text-center">
+        <div className="border-t border-primary/10 pt-6 text-center">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Grilo Cell. Todos os direitos reservados.
           </p>

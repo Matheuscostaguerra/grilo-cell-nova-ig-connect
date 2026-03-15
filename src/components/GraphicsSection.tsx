@@ -11,8 +11,9 @@ const graphicServices = [
 
 const GraphicsSection = () => {
   return (
-    <section id="grafica" className="py-20 bg-secondary/30">
-      <div className="container">
+    <section id="grafica" className="py-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 via-secondary/30 to-secondary/20 pointer-events-none" />
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -20,7 +21,7 @@ const GraphicsSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-            Serviços <span className="text-primary">Gráficos</span>
+            Serviços <span className="text-gradient-green font-tech">Gráficos</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Impressões, adesivos, cartões e artes com qualidade e rapidez.
@@ -35,9 +36,9 @@ const GraphicsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-tech flex flex-col items-center text-center gap-3"
+              className="card-tech flex flex-col items-center text-center gap-3 group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all group-hover:shadow-[0_0_20px_hsl(152_100%_50%/0.2)]">
                 <svc.icon size={28} className="text-primary" />
               </div>
               <h3 className="font-bold text-foreground">{svc.title}</h3>

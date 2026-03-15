@@ -11,8 +11,9 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="py-20 bg-secondary/30">
-      <div className="container">
+    <section id="servicos" className="py-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 via-secondary/30 to-secondary/20 pointer-events-none" />
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -20,7 +21,7 @@ const ServicesSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-            Assistência <span className="text-primary">Técnica</span>
+            Assistência <span className="text-gradient-green font-tech">Técnica</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Profissionais qualificados para resolver seu problema com agilidade e garantia.
@@ -35,9 +36,9 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-tech flex flex-col items-center text-center gap-4"
+              className="card-tech flex flex-col items-center text-center gap-4 group"
             >
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all group-hover:shadow-[0_0_20px_hsl(152_100%_50%/0.2)]">
                 <svc.icon size={32} className="text-primary" />
               </div>
               <h3 className="font-bold text-foreground">{svc.title}</h3>
